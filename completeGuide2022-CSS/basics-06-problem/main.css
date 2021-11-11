@@ -1,4 +1,4 @@
-* {
+body {
   font-family: sans-serif;
 }
 
@@ -12,16 +12,16 @@ code {
   color: red;
 }
 
-.rules li {
-  background-color: black;
-  color: white;
-}
-
 li {
   font-family: inherit;
 }
 
-.first-paragraphy {
+li + li {
+  background-color: black;
+  color: white;
+}
+
+ol > li {
   background-color: black;
   color: white;
 }
