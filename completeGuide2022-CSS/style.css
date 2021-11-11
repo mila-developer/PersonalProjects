@@ -6,11 +6,11 @@ body {
   background: #FF1B68;
 }
 
-h1 {
-  color: #FFFF;
-  font-family: 'Anton', sans-serif;
-}
-
 .section-title {
   color: #2DDF5C;
+}
+
+#product-overview h1 {
+  color: #FFFF;
+  font-family: 'Anton', sans-serif;
 }
