@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
 }
 
@@ -20,8 +20,7 @@ body {
 
 #product-overview h1 {
   color: #FFFFFF;
-  font-family: 'Anton', sans-serif;
-  letter-spacing: 1px;
+  font-family: 'DM Serif Display', serif;
 }
 
 .main-header {
@@ -68,11 +67,17 @@ body {
 
 .main-nav__item a:hover,
 .main-nav__item a:active {
-  color: #fa99b8;
   font-weight: bold;
-  border-bottom: 1px solid white;
+  padding: 8px 8px;
+}
+
+.main-nav__item--cta {
+  color: #FFFFFF;
+  background: #000000;
+  padding: 8px 8px;
+  border-radius: 8px;
 }
 
 #plans p {
-  font-weight: bold
+  font-weight: bold;
 }
