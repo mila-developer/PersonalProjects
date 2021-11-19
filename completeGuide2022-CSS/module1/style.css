@@ -39,12 +39,16 @@ body {
 .plan:hover,
 .plan:active {
   padding: 24px;
-  cursor: pointer;
 }
 
 .plan--highlighted {
   background: #2c010f;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan--highlighted button {
+  background: #720628;
+  color: #FFFFFF;
 }
 
 .plan__annotation {
@@ -71,6 +75,27 @@ body {
 
 .plan__features li {
   margin: 8px 0;
+}
+
+.button {
+  background: #2c010f;
+  color: #FFFFFF;
+  font-family: inherit;
+  border: 1.5px solid #2c010f;
+  padding: 8px;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: #FFFFFF;
+  color: #2c010f;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .main-header {
