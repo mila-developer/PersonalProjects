@@ -5,6 +5,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  background: #dad6d879;
 }
 
 #product-overview {
@@ -96,6 +97,45 @@ body {
 
 .button:focus {
   outline: none;
+}
+
+#key-features {
+  background: #720628;
+  margin-top: 80px;
+  padding: 16px;
+}
+
+#key-features .section-title {
+  color: #FFFFFF;
+  margin: 32px;
+}
+
+.key-feature__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.key-feature {
+  display: inline-block;
+  width: 33%;
+  vertical-align: top;
+}
+
+.key-feature__image {
+  background: #8d324f;
+  width: 128px;
+  height: 128px;
+  border: 2px solid #2c010f;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.key-feature__description {
+  text-align: center;
+  font-weight: bold;
+  color: #cbcfcd;
+  font-size: 20px;
 }
 
 .main-header {
