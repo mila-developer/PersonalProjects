@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  margin: 30px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -10,7 +14,10 @@ body {
 
 .main-header {
   width: 100%;
-  background: #2c010f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #2C010F;
   padding: 8px 16px;
 }
 
