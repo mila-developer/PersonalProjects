@@ -16,6 +16,7 @@ main {
   border: 2px solid #000000;
   border-left: none;
   border-radius: 16px;
+  position: relative;
 }
 
 .package:hover,
@@ -29,6 +30,18 @@ main {
   color: inherit;
   display: block;
   padding: 32px;
+}
+
+.package__badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background: #720628;
+  padding: 8px;
+  border-radius: 8px;
 }
 
 .package__title {
@@ -61,6 +74,7 @@ main {
   border-right: none;
   border-left: 2px solid #000000;
   text-align: right;
+  left: 30px;
 }
 
 #free:hover,
