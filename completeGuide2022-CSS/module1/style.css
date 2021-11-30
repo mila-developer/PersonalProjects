@@ -1,10 +1,10 @@
 #product-overview {
-  background: url("images/mountain.jpg") repeat-x;
+  background: linear-gradient(to top, rgba(80, 68, 18, 0.5) 10%, transparent), url("images/mountain.jpg") repeat-x;
   background-size: contain;
+  background-origin: border-box;
   /* background-image: url("images/mountain.jpg");
   background-repeat: repeat-x;
   background-position: relative;
-  background-origin: border-box;
   background-clip: border-box;
   background-attachment: scroll; */
   width: 100%;
