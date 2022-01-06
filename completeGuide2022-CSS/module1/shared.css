@@ -33,6 +33,29 @@ body {
   z-index: 1;
 }
 
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
+}
+
+
 .main-header > div {
   display: inline-block;
   vertical-align: middle;
@@ -43,12 +66,13 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 22px;
+  vertical-align: middle;
 }
 
 .main-nav {
   display: inline-block;
   text-align: right;
-  width: calc(100% - 74px);
+  width: calc(100% - 122px);
   vertical-align: middle;
 }
 
@@ -63,19 +87,22 @@ body {
   margin: 0 16px;
 }
 
-.main-nav__item a {
+.main-nav__item a,
+.mobile-nav__item a {
   text-decoration: none;
   color: #FFFFFF;
   padding: 3px 0;
 }
-
 .main-nav__item a:hover,
-.main-nav__item a:active {
+.main-nav__item a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
   font-weight: bold;
   padding: 8px 8px;
 }
 
-.main-nav__item--cta {
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
   color: #FFFFFF;
   background: #720628;
   padding: 8px 8px;
@@ -108,4 +135,56 @@ body {
 .main-footer__link a:hover,
 .main-footer__link a:active {
   color: #cbcfcd;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 80%;
+  height: 100vh;
+}
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1.5rem;
+  color: #2C010F;
+}
+
+
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
 }
