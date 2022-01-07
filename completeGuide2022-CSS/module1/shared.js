@@ -5,9 +5,7 @@ var selectPlanButtons = document.querySelectorAll('.plan button');
 var toggleButton = document.querySelector('.toggle-button');
 var mobileNav = document.querySelector('.mobile-nav');
 
-// console.dir(selectPlanButtons);
-// console.log(backdrop); //to see the element in the browser console
-// console.dir(backdrop); // to see in a object
+console.dir(backdrop);
 
 
 // i = 0 -> the first element/button // i < selectPlanButtons -> the element
@@ -16,25 +14,33 @@ var mobileNav = document.querySelector('.mobile-nav');
 // To show the modal window
 for(var i = 0; i < selectPlanButtons.length; i++) {
   selectPlanButtons[i].addEventListener('click', function() {
-    modal.style.display = 'block';
-    modal.style.display = 'block';
+    // modal.style.display = 'block';
+    // modal.style.display = 'block';
+    // modal.className = 'open'; // This will actually overwite the complete class
+    modal.classList.add('open');
+    backdrop.classList.add('open');
   });
 }
 
 // Button NO to modal
 backdrop.addEventListener('click', function() {
-  mobileNav.style.display = 'none';
+  // mobileNav.style.display = 'none';
+  mobileNav.classList.remove('open');
   closeModal();
 });
 
 modal.addEventListener('click', closeModal);
 
 function closeModal() {
-  backdrop.style.display = 'none';
-  modal.style.display = 'none';
+  // backdrop.style.display = 'none';
+  // modal.style.display = 'none';
+  modal.classList.remove('open');
+  backdrop.classList.remove('open');
 }
 
 toggleButton.addEventListener('click', function() {
-  mobileNav.style.display = 'block';
-  backdrop.style.display = 'block';
+  // mobileNav.style.display = 'block';
+  // backdrop.style.display = 'block';
+  mobileNav.classList.add('open');
+  backdrop.classList.add('open');
 });

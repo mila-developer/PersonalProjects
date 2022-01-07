@@ -166,6 +166,26 @@ body {
   color: #2C010F;
 }
 
+.button {
+  background: #0e4f1f;
+  color: white;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: white;
+  color: #0e4f1f;
+}
+
+.button:focus {
+  outline: none;
+}
 
 .toggle-button {
   width: 3rem;
@@ -187,4 +207,8 @@ body {
   background: black;
   display: block;
   margin: 0.6rem 0;
+}
+
+.open {
+  display: block !important;
 }
