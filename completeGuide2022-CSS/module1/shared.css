@@ -28,7 +28,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: #442327;
+  background: #3547B3;
   padding: 8px 16px;
   z-index: 1;
 }
@@ -103,8 +103,8 @@ body {
 
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
-  color: #FFFFFF;
-  background: #A6885D;
+  color: #2021A0;
+  background: #E2C43F;
   padding: 8px 8px;
   border-radius: 16px;
 }
@@ -163,7 +163,7 @@ body {
 
 .mobile-nav__item a {
   font-size: 1.5rem;
-  color: #8A3230;
+  color: #3547B3;
 }
 
 .button {
@@ -204,7 +204,7 @@ body {
 .toggle-button__bar {
   width: 100%;
   height: 0.2rem;
-  background: #A6885D;
+  background: #E2C43F;
   display: block;
   margin: 0.6rem 0;
 }

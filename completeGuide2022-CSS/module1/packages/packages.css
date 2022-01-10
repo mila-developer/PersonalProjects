@@ -40,7 +40,7 @@ main {
   margin: 1.2rem;
   font-size: 0.8rem;
   color: #FFFFFF;
-  background: #A6885D;
+  background: #E2C43F;
   padding: 8px;
   border-radius: 0.5rem;
 }
@@ -57,7 +57,7 @@ main {
   padding: 1rem;
   border: 1px solid #000000;
   font-size: 20px;
-  color: #442327;
+  color: #000000;
   background: #FFFFFF;
 }
 
@@ -67,11 +67,11 @@ main {
 
 #plus {
   margin-top: 50px;
-  background: rgba(138, 50, 48, 0.5);
+  background: rgba(53, 71, 179, 0.7);
 }
 
 #free {
-  background: rgba(165, 152, 154, 0.678);
+  background: rgba(226, 196, 63, 0.7);
   float: right;
   border-right: none;
   border-left: 2px solid #000000;
@@ -85,9 +85,9 @@ main {
 }
 
 #free .package__subtitle {
-  color: #442327;
+  color: #000000;
 }
 
 #premium {
-  background: rgba(68, 35, 39, 0.5);
+  background: rgba(194, 21, 27, 0.7);
 }
