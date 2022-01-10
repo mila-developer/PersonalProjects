@@ -98,15 +98,16 @@ body {
 .mobile-nav__item--cta a:hover,
 .mobile-nav__item--cta a:active {
   font-weight: bold;
-  padding: 8px 8px;
+  padding: 16px 16px;
 }
 
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
-  color: #2021A0;
+  color: #000000;
   background: #E2C43F;
   padding: 8px 8px;
   border-radius: 16px;
+  font-weight: bold;
 }
 
 .main-footer {
