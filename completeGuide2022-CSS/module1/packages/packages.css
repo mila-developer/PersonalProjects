@@ -15,7 +15,6 @@ main {
   width: 80%;
   margin: 16px 0;
   border: 2px solid #000000;
-  border-left: none;
   border-radius: 16px;
   position: relative;
 }
@@ -30,7 +29,7 @@ main {
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 32px;
+  padding: 8px;
 }
 
 .package__badge {
@@ -72,8 +71,6 @@ main {
 
 #free {
   background: rgba(226, 196, 63, 0.7);
-  float: right;
-  border-right: none;
   border-left: 2px solid #000000;
   text-align: right;
   left: 30px;
@@ -90,4 +87,22 @@ main {
 
 #premium {
   background: rgba(194, 21, 27, 0.7);
+}
+
+@media (min-width: 40rem) {
+  main {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1500px) {
+  .package {
+    border-left: 4px solid #000000;
+  }
+
+  #free {
+    border-right: 4px solid #000000;
+  }
 }
