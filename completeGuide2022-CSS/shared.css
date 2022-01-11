@@ -192,6 +192,7 @@ main {
 }
 
 .toggle-button {
+  display: block;
   width: 3rem;
   background: transparent;
   border: none;
@@ -215,4 +216,10 @@ main {
 
 .open {
   display: block !important;
+}
+
+@media (min-height: 40rem) {
+  .toggle-button {
+    display: none;
+  }
 }
