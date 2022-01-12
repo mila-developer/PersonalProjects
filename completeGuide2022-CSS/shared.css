@@ -1,9 +1,22 @@
+
+/*** Font Family ***/
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../fonts/Poppins/Poppins-Light.ttf")
+}
+
+@font-face {
+  font-family: "DM Serif Display", serif;
+  src: url("../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf")
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins-Light", sans-serif;
   margin: 0;
 }
 
@@ -55,25 +68,26 @@ main {
   margin-top: 3.5rem;
 }
 
-.main-header > div {
+/* .main-header > div,
+.main-header ul {
   display: inline-block;
   vertical-align: middle;
-}
+} */
 
 .main-header__brand {
   color: #FFFFFF;
   text-decoration: none;
-  font-weight: bold;
-  height: 2.5rem;
   vertical-align: middle;
+  font-size: 1.2rem;
 }
 
-.main-header__brand img {
-  height: 100%;
+.main-header__brand:hover {
+  padding: 8px;
+  font-weight: bold;
 }
 
 .main-nav {
-  display: inline-block;
+  display: none;
   text-align: right;
   width: calc(100% - 44px);
   vertical-align: middle;
@@ -101,14 +115,14 @@ main {
 .mobile-nav__item--cta a:hover,
 .mobile-nav__item--cta a:active {
   font-weight: bold;
-  padding: 16px 16px;
+  padding: 8px;
 }
 
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
   color: #000000;
   background: #E2C43F;
-  padding: 8px 8px;
+  padding: 5px;
   border-radius: 16px;
   font-weight: bold;
 }
@@ -171,10 +185,10 @@ main {
 }
 
 .button {
-  background: #0e4f1f;
+  background: #E2C43F;
   color: white;
   font: inherit;
-  border: 1.5px solid #0e4f1f;
+  border: 1.5px solid #3547B3;
   padding: 0.5rem;
   border-radius: 8px;
   font-weight: bold;
@@ -184,11 +198,18 @@ main {
 .button:hover,
 .button:active {
   background: white;
-  color: #0e4f1f;
+  color: #3547B3;
 }
 
 .button:focus {
   outline: none;
+}
+
+.button[disabled] {
+  cursor: not-allowed;
+  border: #a1a1a1;
+  background: #ccc;
+  color: #a1a1a1;
 }
 
 .toggle-button {
@@ -199,7 +220,6 @@ main {
   cursor: pointer;
   padding-top: 0;
   padding-bottom: 0;
-  vertical-align: middle;
 }
 
 .toggle-button:focus {
@@ -221,5 +241,9 @@ main {
 @media (min-height: 40rem) {
   .toggle-button {
     display: none;
+  }
+
+  .main-nav {
+    display: inline-block;
   }
 }
