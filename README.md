@@ -10,3 +10,6 @@ In this repository you will have branches with practical projects to study and i
 - HTML
 - CSS & SASS
 - JavaScript
+
+# Tips 
+You can download the extension "Live Server" in the VS Code and open easily the project.
