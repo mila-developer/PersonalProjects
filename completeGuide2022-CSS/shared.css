@@ -33,13 +33,20 @@ body {
 }
 
 .main-header {
+  position: sticky;
   width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   background: #3547B3;
-  padding: 8px 16px;
-  z-index: 1;
+  padding: 8px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main--header {
+  overflow: hidden;
 }
 
 .toggle-button {
@@ -66,20 +73,14 @@ body {
 
 main {
   min-height: calc(100vh - 3.5rem - 8rem);
-  margin-top: 3.5rem;
+  margin-top: 2rem;
 }
-
-/* .main-header > div,
-.main-header ul {
-  display: inline-block;
-  vertical-align: middle;
-} */
 
 .main-header__brand {
   color: #FFFFFF;
   text-decoration: none;
-  vertical-align: middle;
   font-size: 1.2rem;
+  display: block;
 }
 
 .main-header__brand:hover {
@@ -88,21 +89,18 @@ main {
 }
 
 .main-nav {
-  display: none;
-  text-align: right;
-  width: calc(100% - 44px);
-  vertical-align: middle;
+  display: flex;
 }
 
 .main-nav__items {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .main-nav__item {
-  display: inline-block;
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 
 .main-nav__item a,
@@ -138,12 +136,13 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-footer__link {
-  display: inline-block;
-  margin: 0 16px;
+  margin: 0.5rem 0;
 }
 
 .main-footer__link a {
@@ -171,9 +170,12 @@ main {
   width: 90%;
   height: 100%;
   list-style: none;
-  margin: 10% auto;
+  margin: 0 auto;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile-nav__item {
@@ -240,11 +242,25 @@ main {
 }
 
 @media (min-height: 40rem) {
-  .toggle-button {
+  /* .toggle-button {
+    display: block;
+  } */
+
+  /* .main-nav {
     display: none;
+  } */
+
+  .main--header {
+    display: flex;
+    align-items: center;
   }
 
-  .main-nav {
-    display: inline-block;
+  .main-footer__link {
+    margin: 0 1rem;
+  }
+
+  .main-footer__links {
+    flex-direction: row;
+    justify-content: center;
   }
 }
