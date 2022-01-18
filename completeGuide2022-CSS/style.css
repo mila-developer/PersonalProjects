@@ -105,16 +105,6 @@
   font-size: 1.2rem;
 }
 
-.button {
-  background: #E2C43F;
-  color: #FFFFFF;
-  font-family: inherit;
-  padding: 8px;
-  border-radius: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 .modal {
   position: fixed;
   display: none;
