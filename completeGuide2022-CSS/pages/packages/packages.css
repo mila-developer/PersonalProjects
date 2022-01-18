@@ -5,16 +5,17 @@ main {
 .background {
   background: url("../images/mountain.jpg") center/cover;
   filter: grayscale(50%);
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   z-index: -1;
 }
 
 .package {
   width: 80%;
-  margin: 16px 0;
+  margin: 1rem 0;
   border: 2px solid #000000;
+  border-left: none;
   border-radius: 16px;
   position: relative;
 }
@@ -29,7 +30,7 @@ main {
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 8px;
+  padding: 2rem;
 }
 
 .package__badge {
@@ -40,7 +41,7 @@ main {
   font-size: 0.8rem;
   color: #FFFFFF;
   background: #E2C43F;
-  padding: 8px;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
@@ -55,7 +56,7 @@ main {
 .package__info {
   padding: 1rem;
   border: 1px solid #000000;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #000000;
   background: #FFFFFF;
 }
@@ -65,15 +66,15 @@ main {
 }
 
 #plus {
-  margin-top: 50px;
   background: rgba(53, 71, 179, 0.7);
 }
 
 #free {
   background: rgba(226, 196, 63, 0.7);
+  float: right;
+  border-right: none;
   border-left: 2px solid #000000;
   text-align: right;
-  left: 30px;
 }
 
 #free:hover,

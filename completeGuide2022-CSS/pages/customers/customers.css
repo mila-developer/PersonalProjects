@@ -36,9 +36,9 @@ main {
 }
 
 .testimonial__name {
-  margin: 3px;
+  margin: 0;
   color: #C2151B;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .testimonial__subtitle {

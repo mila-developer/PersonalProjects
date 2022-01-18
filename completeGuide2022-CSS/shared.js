@@ -5,11 +5,7 @@ var selectPlanButtons = document.querySelectorAll('.plan button');
 var toggleButton = document.querySelector('.toggle-button');
 var mobileNav = document.querySelector('.mobile-nav');
 
-console.dir(backdrop);
-
-
-// i = 0 -> the first element/button // i < selectPlanButtons -> the element
-// will run while as long i smoller than selectPlanButtons // length -> special proprerty to tell us how many elements we got
+// console.dir(backdrop);
 
 // To show the modal window
 for(var i = 0; i < selectPlanButtons.length; i++) {
