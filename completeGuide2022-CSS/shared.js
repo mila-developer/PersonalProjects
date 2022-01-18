@@ -45,3 +45,10 @@ toggleButton.addEventListener('click', function() {
   mobileNav.classList.add('open');
   backdrop.classList.add('open');
 });
+
+//Toggle dark mode button
+
+function darkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+};
