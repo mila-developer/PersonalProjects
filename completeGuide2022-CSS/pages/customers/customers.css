@@ -14,12 +14,15 @@ main {
 .testimonial__image-container {
   width: 100%;
   max-width: 40rem;
+  /* transform: skew(20deg);
+  overflow: hidden; */
 }
 
 .testimonial__image {
   width: 100%;
   vertical-align: top;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  /* transform: skew(-20deg); */
 }
 
 .testimonial__info {

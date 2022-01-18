@@ -14,8 +14,10 @@ for(var i = 0; i < selectPlanButtons.length; i++) {
     // modal.style.display = 'block';
     // modal.className = 'open'; // This will actually overwite the complete class
     modal.classList.add('open');
-    backdrop.classList.add('open');
-  });
+    backdrop.style.display = 'block';
+    setTimeout(function() {
+      backdrop.classList.remove('open');
+    }, 10);  });
 }
 
 // Button NO to modal
@@ -37,13 +39,19 @@ function closeModal() {
     modal.classList.remove('open');
   }
   backdrop.classList.remove('open');
+  setTimeout(function() {
+    backdrop.style.display = 'none';
+  }, 200);
 }
 
 toggleButton.addEventListener('click', function() {
   // mobileNav.style.display = 'block';
   // backdrop.style.display = 'block';
   mobileNav.classList.add('open');
-  backdrop.classList.add('open');
+  backdrop.style.display = 'block';
+  setTimeout(function() {
+    backdrop.classList.add('open');
+  }, 10);
 });
 
 //Toggle dark mode button
