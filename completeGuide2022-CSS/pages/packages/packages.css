@@ -25,6 +25,7 @@ main {
 .package:active{
   box-shadow: 2px 2px 20px #000000;
   border-color: #FFFFFF;
+  animation: push-up 1s ease-out forwards;
 }
 
 .package a {

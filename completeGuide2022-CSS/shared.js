@@ -4,8 +4,8 @@ var modalNoButton = document.querySelector('.modal__action--negative');
 var selectPlanButtons = document.querySelectorAll('.plan button');
 var toggleButton = document.querySelector('.toggle-button');
 var mobileNav = document.querySelector('.mobile-nav');
-
-// console.dir(backdrop);
+var ctaButton = document.querySelector('.main-nav__item--cta');
+var ctaButton = document.querySelector('.dark-mde');
 
 // To show the modal window
 for(var i = 0; i < selectPlanButtons.length; i++) {
@@ -54,8 +54,19 @@ toggleButton.addEventListener('click', function() {
   }, 10);
 });
 
-//Toggle dark mode button
+ctaButton.addEventListener('animationsstart', function(event) {
+  console.log('Animatio started', event);
+})
 
+ctaButton.addEventListener('animationend', function(event) {
+  console.log('Animation ended', event);
+})
+
+ctaButton.addEventListener('animationiteration', function(event) {
+  console.log('Animation iteration', event);
+});
+
+//Toggle dark mode button
 function darkMode() {
   var element = document.body;
   element.classList.toggle("dark-mode");
