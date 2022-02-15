@@ -1,40 +1,44 @@
-let val;
+// set local storage item
+// localStorage.setItem('name', 'John');
+// localStorage.setItem('age', '30');
 
-val = document;
-val = document.all;
-val = document.all[2];
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+// set session storage item
+// sessionStorage.setItem('name', 'Beth');
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].id;
-val = document.forms[0].method;
-val = document.forms[0].action;
+// remove from storage
+// localStorage.removeItem('name');
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].id;
-val = document.links[0].className;
-val = document.links[0].classList[0];
+// // get from storage
+// const name = localStorage.getItem('name');
+// const age = localStorage.getItem('age');
 
-val = document.images;
+// // clear local storage
+// localStorage.clear();
 
-val = document.scripts;
-val = document.scripts[2].getAttribute('src');
+// console.log(name, age);
 
-let scripts = document.scripts;
+document.querySelector('form').addEventListener('submit', function(e) {
+  const task = document.getElementById('task').value;
 
-let scriptsArr = Array.from(scripts);
+  let tasks;
 
-scriptsArr.forEach(function(script) {
-  console.log(script.getAttribute('src'));
+  if(localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
+
+  tasks.push(task);
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  alert('Task saved');
+
+  e.preventDefault();
 });
 
-console.log(val);
+const tasks = JSON.parse(localStorage.getItem('tasks'));
+
+tasks.forEach(function(task){
+  console.log(task);
+});
