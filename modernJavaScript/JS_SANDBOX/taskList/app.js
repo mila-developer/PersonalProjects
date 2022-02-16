@@ -1,44 +1,68 @@
-// set local storage item
-// localStorage.setItem('name', 'John');
-// localStorage.setItem('age', '30');
+// Define UI Vars
+const form = document.querySelector('#task-form');
+const taskList = document.querySelector('.collection');
+const clearBtn = document.querySelector('.clear-tasks');
+const filter = document.querySelector('#filter');
+const taskInput = document.querySelector('#task');
 
-// set session storage item
-// sessionStorage.setItem('name', 'Beth');
+// Load all event listeners
+loadEventListeners();
 
-// remove from storage
-// localStorage.removeItem('name');
+// Load all event listeners
+function loadEventListeners() {
+  // Add task event
+  form.addEventListener('submit', addTask);
+  // Remove task event
+  taskList.addEventListener('click', removeTask);
+  // Clear task event
+  clearBtn.addEventListener('click', clearTasks);
+}
 
-// // get from storage
-// const name = localStorage.getItem('name');
-// const age = localStorage.getItem('age');
-
-// // clear local storage
-// localStorage.clear();
-
-// console.log(name, age);
-
-document.querySelector('form').addEventListener('submit', function(e) {
-  const task = document.getElementById('task').value;
-
-  let tasks;
-
-  if(localStorage.getItem('tasks') === null) {
-    tasks = [];
-  } else {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
+// Add Task
+function addTask(e) {
+  if(taskInput.value === '') {
+    alert('Add a task');
   }
 
-  tasks.push(task);
+  // Create li element
+  const li = document.createElement('li');
+  // Add class
+  li.className = 'collection-item';
+  // Create text node and append to li
+  li.appendChild(document.createTextNode(taskInput.value));
+  // Create new link element
+  const link = document.createElement('a');
+  // Add class
+  link.className = 'delete-item secondary-content';
+  // Add icon html
+  link.innerHTML = '<i class="fa fa-remove"></i>';
+  // Append the link to li
+  li.appendChild(link);
 
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  // Append li to ul
+  taskList.appendChild(li);
 
-  alert('Task saved');
+  // Clear input
+  taskInput.value = '';
 
   e.preventDefault();
-});
+}
 
-const tasks = JSON.parse(localStorage.getItem('tasks'));
+// Remove Task
+function removeTask(e) {
+  if(e.target.parentElement.classList.contains('delete-item')) {
+    if(confirm('Are You Sure?')) {
+      e.target.parentElement.parentElement.remove();
+    }
+  }
+}
 
-tasks.forEach(function(task){
-  console.log(task);
-});
+// Clear Tasks
+function clearTasks() {
+  // taskList.innerHTML = '';
+
+  // Faster
+  while(taskList.firstChild) {
+    taskList.removeChild(taskList.firstChild);
+  }
+}
